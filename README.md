@@ -9,8 +9,7 @@ https://github.com/omcodedthis/EnvGPT/assets/119602009/91638c73-3e19-4f87-96ca-3
 Above is a demo of the EnvGPT in action, hosted on Steamship. Apologies for the poor quality, it is due to GitHub's file limits & video compression.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-![Screenshot 2023-06-20 195638](https://github.com/omcodedthis/EnvGPT/assets/119602009/0a533c94-a6c8-4137-8cb2-c18fd528bd7f)
-![Screenshot 2023-06-20 2031151](https://github.com/omcodedthis/EnvGPT/assets/119602009/789504b6-5909-4b59-a0db-ea4147fe037b)
+![Screenshot 2023-06-20 213017](https://github.com/omcodedthis/EnvGPT/assets/119602009/98eed1f1-2bf3-430e-ac83-7b9d02d4aa4f)
 
 Above are some screenshots showing how EnvGPT interacts with the user's query. This was taken using the CLI (Terminal) when testing EnvGPT before deploying to Steamship. Click on the image to view an enlarged version in a new tab.
 
