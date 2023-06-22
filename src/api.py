@@ -9,9 +9,11 @@ from steamship.agents.mixins.transports.steamship_widget import SteamshipWidgetT
 from steamship.agents.mixins.transports.telegram import TelegramTransport
 from steamship.agents.react import ReACTAgent
 from steamship.agents.schema import AgentContext
+from steamship.agents.schema.context import Metadata
 from steamship.agents.service.agent_service import AgentService
 from steamship.agents.utils import with_llm
 from steamship.invocable import Config, post
+from steamship.invocable.mixins.indexer_pipeline_mixin import IndexerPipelineMixin
 from steamship.utils.repl import AgentREPL
 
 from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
@@ -98,6 +100,7 @@ Begin!
 New input: {input}
 {scratchpad}"""
 
+
 #TelegramTransport config
 class TelegramTransportConfig(Config):
     bot_token: str = Field(description="The secret token for your Telegram bot")
@@ -105,7 +108,8 @@ class TelegramTransportConfig(Config):
 
 
 class MyAssistant(AgentService):
-    # support for telegram bots
+    
+    # supports telegram bot usage
     config: TelegramTransportConfig
 
     @classmethod
@@ -117,7 +121,7 @@ class MyAssistant(AgentService):
         super().__init__(**kwargs)
 
         self._agent = ReACTAgent(tools=[
-                # tools it uses (if necessary) to generate its response
+            # tools it can use to answer the user's query
                 SearchTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
@@ -135,7 +139,6 @@ class MyAssistant(AgentService):
                 )
             ],
             llm=OpenAI(self.client,model_name="gpt-4"),
-            conversation_memory=MessageWindowMessageSelector(k=int(MESSAGE_COUNT)),
         )
         self._agent.PROMPT = SYSTEM_PROMPT
 
