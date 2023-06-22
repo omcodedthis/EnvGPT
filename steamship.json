@@ -1,9 +1,9 @@
 {
 	"type": "package",
-	"handle": "envgpt-bot",
-	"version": "1.2",
-	"description": "A chatbot that gives answers through an environmental lense, powered by Steamship.",
-	"author": "om",
+	"handle": "envgpt4-bot",
+	"version": "2.1",
+	"description": "An environmentally-conscious consultant, powered by Steamship.",
+	"author": "",
 	"entrypoint": "Unused",
 	"public": true,
 	"plugin": null,
@@ -13,7 +13,18 @@
 			"examples"
 		]
 	},
-	"configTemplate": {},
+	"configTemplate": {
+		"bot_token": {
+			"type": "string",
+			"description": "The secret token for your Telegram bot",
+			"default": null
+		},
+		"api_base": {
+			"type": "string",
+			"description": "The root API for Telegram",
+			"default": "https://api.telegram.org/bot"
+		}
+	},
 	"steamshipRegistry": {
 		"tagline": "",
 		"tagline2": null,
@@ -29,7 +40,7 @@
 		"authorTwitter": null,
 		"authorUrl": null,
 		"tags": [
-			"Environment"
+			"Harvard"
 		]
 	}
 }
