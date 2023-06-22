@@ -117,7 +117,7 @@ class MyAssistant(AgentService):
         super().__init__(**kwargs)
 
         self._agent = ReACTAgent(tools=[
-                # tools it can use to generate its response
+                # tools it uses (if necessary) to generate its response
                 SearchTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
