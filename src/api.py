@@ -5,9 +5,14 @@ from typing import List
 from steamship import Block
 from steamship.agents.llms import OpenAI
 from steamship.agents.mixins.transports.steamship_widget import SteamshipWidgetTransport
+from steamship.agents.mixins.transports.telegram import TelegramTransport
 from steamship.agents.react import ReACTAgent
-from steamship.agents.schema import AgentContext, Metadata
+from steamship.agents.schema import AgentContext
 from steamship.agents.service.agent_service import AgentService
+from steamship.agents.utils import with_llm
+from steamship.invocable import post
+from steamship.invocable import Config, post
+from steamship.utils.repl import AgentREPL
 
 from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
 from steamship.agents.tools.search.search import SearchTool
@@ -16,10 +21,10 @@ from steamship.agents.tools.text_generation.text_rewrite_tool import TextRewriti
 from steamship.agents.tools.text_generation.text_translation_tool import TextTranslationTool
 from steamship.agents.tools.question_answering.vector_search_learner_tool import VectorSearchLearnerTool
 
+from pydantic import Field
+from typing import Type
 from steamship.agents.utils import with_llm
-from steamship.invocable import post
-from steamship.utils.repl import AgentREPL
-from utils import print_blocks
+
 
 SYSTEM_PROMPT = """You are EnvGPT, a consultant that aims to answer the user's queries to the best of your ability with an environmental lense.
 
@@ -97,14 +102,25 @@ Begin!
 New input: {input}
 {scratchpad}"""
 
+#TelegramTransport config
+class TelegramTransportConfig(Config):
+    bot_token: str = Field(description="The secret token for your Telegram bot")
+    api_base: str = Field("https://api.telegram.org/bot", description="The root API for Telegram")
+
 
 class MyAssistant(AgentService):
+    
+    config: TelegramTransportConfig
+
+    @classmethod
+    def config_cls(cls) -> Type[Config]:
+        """Return the Configuration class."""
+        return TelegramTransportConfig
+           
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self._agent = ReACTAgent(
-        # Various tools that it can access to answer the given query by the user.
-            tools=[
+        self._agent = ReACTAgent(tools=[
                 SearchTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
@@ -121,16 +137,21 @@ class MyAssistant(AgentService):
                     )
                 )
             ],
-            llm=OpenAI(self.client),
+            llm=OpenAI(self.client,model_name="gpt-4"),
+            conversation_memory=MessageWindowMessageSelector(k=int(MESSAGE_COUNT)),
         )
         self._agent.PROMPT = SYSTEM_PROMPT
 
-        # This Mixin provides HTTP endpoints that connects this agent to a web client
-        self.add_mixin(
-            SteamshipWidgetTransport(
-                client=self.client, agent_service=self, agent=self._agent
-            )
-        )
+        #add Steamship widget chat mixin
+        self.widget_mixin = SteamshipWidgetTransport(self.client,self,self._agent)
+        self.add_mixin(self.widget_mixin,permit_overwrite_of_existing_methods=True)
+        #add Telegram chat mixin 
+        self.telegram_mixin = TelegramTransport(self.client,self.config,self,self._agent)
+        self.add_mixin(self.telegram_mixin,permit_overwrite_of_existing_methods=True)
+        #IndexerMixin
+        self.indexer_mixin = IndexerPipelineMixin(self.client,self)
+        self.add_mixin(self.indexer_mixin,permit_overwrite_of_existing_methods=True)
+
 
     @post("prompt")
     def prompt(self, prompt: str) -> str:
