@@ -1,6 +1,7 @@
 import uuid
 
-from typing import List
+from typing import List, Type
+from pydantic import Field
 
 from steamship import Block
 from steamship.agents.llms import OpenAI
@@ -10,7 +11,6 @@ from steamship.agents.react import ReACTAgent
 from steamship.agents.schema import AgentContext
 from steamship.agents.service.agent_service import AgentService
 from steamship.agents.utils import with_llm
-from steamship.invocable import post
 from steamship.invocable import Config, post
 from steamship.utils.repl import AgentREPL
 
@@ -20,10 +20,6 @@ from steamship.agents.tools.text_generation.summarize_text_with_prompt_tool impo
 from steamship.agents.tools.text_generation.text_rewrite_tool import TextRewritingTool
 from steamship.agents.tools.text_generation.text_translation_tool import TextTranslationTool
 from steamship.agents.tools.question_answering.vector_search_learner_tool import VectorSearchLearnerTool
-
-from pydantic import Field
-from typing import Type
-from steamship.agents.utils import with_llm
 
 
 SYSTEM_PROMPT = """You are EnvGPT, a consultant that aims to answer the user's queries to the best of your ability with an environmental lense.
@@ -109,7 +105,7 @@ class TelegramTransportConfig(Config):
 
 
 class MyAssistant(AgentService):
-    
+    # support for telegram bots
     config: TelegramTransportConfig
 
     @classmethod
@@ -121,6 +117,7 @@ class MyAssistant(AgentService):
         super().__init__(**kwargs)
 
         self._agent = ReACTAgent(tools=[
+                # tools it can use to generate its response
                 SearchTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
