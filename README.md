@@ -11,7 +11,7 @@ https://github.com/omcodedthis/EnvGPT/assets/119602009/cdb4b4b2-cfe0-4eb2-aeec-5
 Above is a demo of the EnvGPT in action, hosted on Steamship. Apologies for the poor quality, it is due to GitHub's file size limits & video compression. As shown above, all its replies are given with an environmental lens.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-![Screenshot 2023-06-21 204515](https://github.com/omcodedthis/EnvGPT/assets/119602009/968235e9-1a28-4d48-b393-06495b5d2237)
+![EnvGPTQnA](https://github.com/omcodedthis/EnvGPT/assets/119602009/dede7f53-96a2-47c6-9081-ba14764ad048)
 
 
 Above are some screenshots showing how EnvGPT interacts with the user's query (using the tools it has to generate its response). This was taken using the CLI (Terminal) when testing EnvGPT before deploying to Steamship. Click on the image to view an enlarged version in a new tab.
