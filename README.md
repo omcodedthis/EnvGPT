@@ -3,33 +3,29 @@ EnvGPT is an AI chatbot built & hosted on [Steamship.](https://www.steamship.com
 
 ## Demo
 
-
 https://github.com/omcodedthis/EnvGPT/assets/119602009/cdb4b4b2-cfe0-4eb2-aeec-576d770989b1
 
-
-
-Above is a demo of the EnvGPT in action, hosted on Steamship. Apologies for the poor quality, it is due to GitHub's file size limits & video compression. As shown above, all its replies are given with an environmental lens.
+Above is a demo of EnvGPT in action, hosted on Steamship. Apologies for the poor quality, it is due to GitHub's file size limits & video compression. As shown above, all its replies are given with an environmental lens.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![EnvGPTQnA](https://github.com/omcodedthis/EnvGPT/assets/119602009/dede7f53-96a2-47c6-9081-ba14764ad048)
 
-
-Above are some screenshots showing how EnvGPT interacts with the user's query (using the tools it has to generate its response). This was taken using the CLI (Terminal) when testing EnvGPT before deploying to Steamship. Click on the image to view an enlarged version in a new tab.
+Above shows how EnvGPT interacts with the user's query (using the tools it has to generate its response). This was taken using the CLI (Terminal) when testing EnvGPT before deploying it to Steamship. Click on the image to view an enlarged version in a new tab.
 
 
 ## Changelog & Future Updates
 * Added support for Telegram Bots, you can do so [here.](https://github.com/steamship-packages/telegram-buddy/blob/main/README.md)
+* Added sentiment analysis for articles / text queried by the user (currently unable to push these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon).
 * Add support for Images.
-* Add sentiment analysis for articles / text queried by the user.
-
+  
 
 ## Getting Started
 I really wanted to provide a live instance of EnvGPT but Steamship has usage limits for free-tier accounts. You can still use EnvGPT by creating your own instance using the link provided below.
 
-* Create a [Steamship](https://www.steamship.com/) account.
+* Make a [Steamship](https://www.steamship.com/) account.
   
 * Create your own instance of EnvGPT using the links below.
-  * Telegram Supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
-  * Web Instance version [here.](https://www.steamship.com/packages/envgpt-bot)
+  * Telegram-supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
+  * Web-based version [here.](https://www.steamship.com/packages/envgpt-bot)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
