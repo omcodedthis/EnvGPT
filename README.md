@@ -15,8 +15,14 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
 
 ## Changelog & Future Updates
 * Added support for Telegram Bots, you can do so [here.](https://github.com/steamship-packages/telegram-buddy/blob/main/README.md)
+  
+* Added the ability to keep track of the user's preferences by default (the user does not have to specify this for it to occur).
+
+* Added support for Image Generation from text prompts if specified.
+  
 * Added sentiment analysis for articles / text queried by the user (currently unable to push these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon).
-* Add support for Images.
+
+* Add support for Speech Generation.
   
 
 ## Getting Started
