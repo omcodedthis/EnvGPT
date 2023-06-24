@@ -1,6 +1,7 @@
 # EnvGPT
 EnvGPT is an AI chatbot built & hosted on [Steamship.](https://www.steamship.com/) It acts as a assistant / consultant that answers the user's queries with an environmental viewpoint. It has the ability to lookup various terms, translate text, summarise text as required to answer the user's queries using [OpenAI's GPT-4.](https://openai.com/gpt-4) It takes into consideration the environment wherever possible & includes it in its reply to the user. This is an early preview of AI-based software (AI Agents).
 
+
 ## Demo
 
 https://github.com/omcodedthis/EnvGPT/assets/119602009/cdb4b4b2-cfe0-4eb2-aeec-576d770989b1
