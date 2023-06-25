@@ -1,7 +1,7 @@
 {
 	"type": "package",
 	"handle": "envgpt4-bot",
-	"version": "2.1",
+	"version": "2.2",
 	"description": "An environmentally-conscious consultant, powered by Steamship.",
 	"author": "",
 	"entrypoint": "Unused",
@@ -40,7 +40,7 @@
 		"authorTwitter": null,
 		"authorUrl": null,
 		"tags": [
-			"Harvard"
+			"Environment"
 		]
 	}
 }

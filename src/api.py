@@ -16,8 +16,9 @@ from steamship.invocable import Config, post
 from steamship.invocable.mixins.indexer_pipeline_mixin import IndexerPipelineMixin
 from steamship.utils.repl import AgentREPL
 
-from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
 from steamship.agents.tools.search.search import SearchTool
+from steamship.agents.tools.classification.sentiment_analysis_tool import SentimentAnalysisTool
+from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
 from steamship.agents.tools.text_generation.summarize_text_with_prompt_tool import SummarizeTextWithPromptTool
 from steamship.agents.tools.text_generation.text_rewrite_tool import TextRewritingTool
 from steamship.agents.tools.text_generation.text_translation_tool import TextTranslationTool
@@ -123,6 +124,7 @@ class MyAssistant(AgentService):
         self._agent = ReACTAgent(tools=[
             # tools it can use to answer the user's query
                 SearchTool(),
+                SentimentAnalysisTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
                 TextTranslationTool(),
