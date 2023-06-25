@@ -21,7 +21,7 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
 
 * Added support for Image Generation from text prompts if specified.
   
-* Added sentiment analysis for articles / text queried by the user (currently unable to push these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon).
+* Added sentiment analysis for articles / text queried by the user (currently unable to push these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon. See branch [`yet-to-be-pushed`](https://github.com/omcodedthis/EnvGPT/tree/yet-to-be-pushed)).
 
 * Add support for Speech Generation.
   
@@ -35,4 +35,15 @@ I really wanted to provide a live instance of EnvGPT but Steamship has usage lim
   * Telegram-supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
   * Web-based version [here.](https://www.steamship.com/packages/envgpt-bot)
 
+* If you want to use EnvGPT as a basis for your own projects, use these command lines to run it.
+  * To run it in the terminal,
+ 
+  ```
+  PYTHONPATH=src python3.8 src/api.py
+   ```
+  
+  * To deploy to Steamship,
+  ```
+  ship deploy
+   ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
