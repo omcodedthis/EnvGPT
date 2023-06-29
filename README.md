@@ -27,7 +27,7 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
   
 
 ## Getting Started
-I really wanted to provide a live instance of EnvGPT but Steamship has usage limits for free-tier accounts. You can still use EnvGPT by creating your own instance using the link provided below.
+I really wanted to provide a live instance of EnvGPT but Steamship has usage limits for free-tier accounts. You can still use EnvGPT by creating your own instance using the links provided below.
 
 * Make a [Steamship](https://www.steamship.com/) account.
   
