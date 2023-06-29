@@ -35,7 +35,7 @@ I really wanted to provide a live instance of EnvGPT but Steamship has usage lim
   * Telegram-supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
   * Web-based version [here.](https://www.steamship.com/packages/envgpt-bot)
 
-* If you want to use EnvGPT as a basis for your own projects, use these command lines to run it.
+* If you want to use EnvGPT as a basis for your own projects, use these command lines.
   * To run it in the terminal,
  
   ```
