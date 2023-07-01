@@ -15,15 +15,17 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
 
 
 ## Changelog & Future Updates
+Currently unable to push some of these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon. See branch [`yet-to-be-pushed`](https://github.com/omcodedthis/EnvGPT/tree/yet-to-be-pushed) for these updates.
+
 * Added support for Telegram Bots, you can do so [here.](https://github.com/steamship-packages/telegram-buddy/blob/main/README.md)
   
-* Added the ability to keep track of the user's preferences by default (the user does not have to specify this for it to occur).
+* Added the ability to keep track of the user's preferences by default.
 
 * Added support for Image Generation from text prompts if specified.
   
-* Added sentiment analysis for articles / text queried by the user (currently unable to push these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon. See branch [`yet-to-be-pushed`](https://github.com/omcodedthis/EnvGPT/tree/yet-to-be-pushed)).
+* Added sentiment analysis for articles / text queried by the user (See branch `yet-to-be-pushed`).
 
-* Add support for Speech Generation.
+* Added support for Speech Generation from text prompts if specified (See branch `yet-to-be-pushed`).
   
 
 ## Getting Started
