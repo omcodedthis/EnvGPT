@@ -23,7 +23,7 @@ Currently unable to push some of these changes to EnvGPT on Steamship due to my 
 
 * Added support for Image Generation from text prompts if specified.
   
-* Added sentiment analysis for articles / text queried by the user (See branch `yet-to-be-pushed`).
+* Added sentiment analysis for articles or text queried by the user (See branch `yet-to-be-pushed`).
 
 * Added support for Speech Generation from text prompts if specified (See branch `yet-to-be-pushed`).
   
