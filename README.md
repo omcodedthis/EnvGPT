@@ -26,6 +26,8 @@ Currently unable to push some of these changes to EnvGPT on Steamship due to my 
 * Added sentiment analysis for articles or text queried by the user (See branch `yet-to-be-pushed`).
 
 * Added support for Speech Generation from text prompts if specified (See branch `yet-to-be-pushed`).
+
+* Add support for rephrasing text provided by the user. 
   
 
 ## Getting Started
