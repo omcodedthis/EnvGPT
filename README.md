@@ -27,7 +27,7 @@ Currently unable to push some of these changes to EnvGPT on Steamship due to my 
 
 * Added support for Speech Generation from text prompts if specified (See branch `yet-to-be-pushed`).
 
-* Add support for rephrasing text provided by the user. 
+* Added support for rephrasing text provided by the user. 
   
 
 ## Getting Started
