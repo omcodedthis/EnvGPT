@@ -103,7 +103,7 @@ New input: {input}
 {scratchpad}"""
 
 
-#TelegramTransport config
+# TelegramTransport config
 class TelegramTransportConfig(Config):
     bot_token: str = Field(description="The secret token for your Telegram bot")
     api_base: str = Field("https://api.telegram.org/bot", description="The root API for Telegram")
@@ -146,13 +146,13 @@ class MyAssistant(AgentService):
         )
         self._agent.PROMPT = SYSTEM_PROMPT
 
-        #add Steamship widget chat mixin
+        # add Steamship widget chat mixin
         self.widget_mixin = SteamshipWidgetTransport(self.client,self,self._agent)
         self.add_mixin(self.widget_mixin,permit_overwrite_of_existing_methods=True)
-        #add Telegram chat mixin 
+        # add Telegram chat mixin 
         self.telegram_mixin = TelegramTransport(self.client,self.config,self,self._agent)
         self.add_mixin(self.telegram_mixin,permit_overwrite_of_existing_methods=True)
-        #IndexerMixin
+        # IndexerMixin
         self.indexer_mixin = IndexerPipelineMixin(self.client,self)
         self.add_mixin(self.indexer_mixin,permit_overwrite_of_existing_methods=True)
 
