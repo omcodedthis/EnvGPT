@@ -15,7 +15,7 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
 
 
 ## Changelog & Future Updates
-Workaround found, branch `yet-to-be-pushed` has merged with `main`.
+Workaround found, branch `yet-to-be-pushed` has merged with `main`. The changes that were made locally have been pushed to Steamship.
 
 * Added support for Telegram Bots, you can do so [here.](https://github.com/steamship-packages/telegram-buddy/blob/main/README.md)
   
