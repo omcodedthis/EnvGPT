@@ -121,7 +121,7 @@ def print_blocks(client: Steamship, blocks: List[Block]) -> str:
     if output:
         return output
 
-
+ 
 class LoggingDisabled:
     """Context manager that turns off logging within context."""
 
