@@ -1,7 +1,7 @@
 {
 	"type": "package",
-	"handle": "envgpt4-bot",
-	"version": "2.2",
+	"handle": "envgpt-4-bot",
+	"version": "2.5",
 	"description": "An environmentally-conscious consultant, powered by Steamship.",
 	"author": "",
 	"entrypoint": "Unused",
