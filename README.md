@@ -4,7 +4,7 @@ EnvGPT is an AI chatbot built & hosted on [Steamship.](https://www.steamship.com
 
 ## Demo
 
-https://github.com/omcodedthis/EnvGPT/assets/119602009/cdb4b4b2-cfe0-4eb2-aeec-576d770989b1
+https://github.com/omcodedthis/EnvGPT/assets/119602009/4d91e700-0a55-4709-acc7-1643040041d3
 
 Above is a demo of EnvGPT in action, hosted on Steamship. Apologies for the poor quality, it is due to GitHub's file size limits & video compression. As shown above, all its replies are given with an environmental lens.
 
@@ -15,7 +15,7 @@ Above shows how EnvGPT interacts with the user's query (using the tools it has t
 
 
 ## Changelog & Future Updates
-Currently unable to push some of these changes to EnvGPT on Steamship due to my free-tier subscription ending, will find a workaround soon. See branch [`yet-to-be-pushed`](https://github.com/omcodedthis/EnvGPT/tree/yet-to-be-pushed) for these updates.
+Workaround found, branch `yet-to-be-pushed` has merged with `main`.
 
 * Added support for Telegram Bots, you can do so [here.](https://github.com/steamship-packages/telegram-buddy/blob/main/README.md)
   
@@ -23,9 +23,9 @@ Currently unable to push some of these changes to EnvGPT on Steamship due to my 
 
 * Added support for Image Generation from text prompts if specified.
   
-* Added sentiment analysis for articles or text queried by the user (See branch `yet-to-be-pushed`).
+* Added sentiment analysis for articles or text queried by the user.
 
-* Added support for Speech Generation from text prompts if specified (See branch `yet-to-be-pushed`).
+* Added support for Speech Generation from text prompts if specified.
 
 * Added support for rephrasing text provided by the user. 
   
@@ -36,6 +36,7 @@ I really wanted to provide a live instance of EnvGPT but Steamship has usage lim
 * Make a [Steamship](https://www.steamship.com/) account.
   
 * Create your own instance of EnvGPT using the links below.
+  * Most updated (Telegram-supported as well) version [here.](https://www.steamship.com/packages/envgpt-4-bot)
   * Telegram-supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
   * Web-based version [here.](https://www.steamship.com/packages/envgpt-bot)
 
