@@ -16,8 +16,10 @@ from steamship.invocable import Config, post
 from steamship.invocable.mixins.indexer_pipeline_mixin import IndexerPipelineMixin
 from steamship.utils.repl import AgentREPL
 
-from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
+from steamship.agents.tools.speech_generation.generate_speech import GenerateSpeechTool
 from steamship.agents.tools.search.search import SearchTool
+from steamship.agents.tools.classification.sentiment_analysis_tool import SentimentAnalysisTool
+from steamship.agents.tools.image_generation.stable_diffusion import StableDiffusionTool
 from steamship.agents.tools.text_generation.summarize_text_with_prompt_tool import SummarizeTextWithPromptTool
 from steamship.agents.tools.text_generation.text_rewrite_tool import TextRewritingTool
 from steamship.agents.tools.text_generation.text_translation_tool import TextTranslationTool
@@ -101,7 +103,7 @@ New input: {input}
 {scratchpad}"""
 
 
-#TelegramTransport config
+# TelegramTransport config
 class TelegramTransportConfig(Config):
     bot_token: str = Field(description="The secret token for your Telegram bot")
     api_base: str = Field("https://api.telegram.org/bot", description="The root API for Telegram")
@@ -122,7 +124,9 @@ class MyAssistant(AgentService):
 
         self._agent = ReACTAgent(tools=[
             # tools it can use to answer the user's query
+                GenerateSpeechTool(),
                 SearchTool(),
+                SentimentAnalysisTool(),
                 StableDiffusionTool(),
                 SummarizeTextWithPromptTool(),
                 TextTranslationTool(),
@@ -142,13 +146,13 @@ class MyAssistant(AgentService):
         )
         self._agent.PROMPT = SYSTEM_PROMPT
 
-        #add Steamship widget chat mixin
+        # add Steamship widget chat mixin
         self.widget_mixin = SteamshipWidgetTransport(self.client,self,self._agent)
         self.add_mixin(self.widget_mixin,permit_overwrite_of_existing_methods=True)
-        #add Telegram chat mixin 
+        # add Telegram chat mixin 
         self.telegram_mixin = TelegramTransport(self.client,self.config,self,self._agent)
         self.add_mixin(self.telegram_mixin,permit_overwrite_of_existing_methods=True)
-        #IndexerMixin
+        # IndexerMixin
         self.indexer_mixin = IndexerPipelineMixin(self.client,self)
         self.add_mixin(self.indexer_mixin,permit_overwrite_of_existing_methods=True)
 
