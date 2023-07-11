@@ -27,7 +27,9 @@ Workaround found, branch `yet-to-be-pushed` has merged with `main`. The changes 
 
 * Added support for Speech Generation from text prompts if specified.
 
-* Added support for rephrasing text provided by the user. 
+* Added support for rephrasing text provided by the user.
+
+* Add the ability to classify a piece of text.
   
 
 ## Getting Started
