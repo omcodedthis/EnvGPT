@@ -29,7 +29,7 @@ Workaround found, branch `yet-to-be-pushed` has merged with `main`. The changes 
 
 * Added support for rephrasing text provided by the user.
 
-* Add the ability to classify a piece of text.
+* Added the ability to classify a piece of text if specified.
   
 
 ## Getting Started
