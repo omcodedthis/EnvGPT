@@ -24,6 +24,7 @@ from steamship.agents.tools.text_generation.summarize_text_with_prompt_tool impo
 from steamship.agents.tools.text_generation.text_rewrite_tool import TextRewritingTool
 from steamship.agents.tools.text_generation.text_translation_tool import TextTranslationTool
 from steamship.agents.tools.question_answering.vector_search_learner_tool import VectorSearchLearnerTool
+from steamship.agents.tools.classification.zero_shot_classifier_tool import ZeroShotClassifierTool
 
 
 SYSTEM_PROMPT = """You are EnvGPT, a consultant that aims to answer the user's queries to the best of your ability with an environmental lense.
@@ -140,7 +141,8 @@ class MyAssistant(AgentService):
                         "The input is the user's preference to learn. "
                         "The output is a confirmation of the personal preference that will be remembered."
                     )
-                )
+                ),
+                ZeroShotClassifierTool()
             ],
             llm=OpenAI(self.client,model_name="gpt-4"),
         )
