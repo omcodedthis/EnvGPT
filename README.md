@@ -38,7 +38,7 @@ I really wanted to provide a live instance of EnvGPT but Steamship has usage lim
 * Make a [Steamship](https://www.steamship.com/) account.
   
 * Create your own instance of EnvGPT using the links below.
-  * Most updated (Telegram-supported as well) version [here.](https://www.steamship.com/packages/envgpt-4-bot)
+  * Latest (Telegram-supported as well) version [here.](https://www.steamship.com/packages/envgpt-4-bot)
   * Telegram-supported version [here.](https://www.steamship.com/packages/envgpt4-bot)
   * Web-based version [here.](https://www.steamship.com/packages/envgpt-bot)
 
