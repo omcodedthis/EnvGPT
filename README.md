@@ -11,7 +11,7 @@ Above is a demo of EnvGPT in action, hosted on Steamship. Apologies for the poor
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![EnvGPTQnA](https://github.com/omcodedthis/EnvGPT/assets/119602009/dede7f53-96a2-47c6-9081-ba14764ad048)
 
-Above shows how EnvGPT interacts with the user's query (using the tools it has to generate its response). This was taken using the CLI (Terminal) when testing EnvGPT before deploying it to Steamship. Click on the image to view an enlarged version in a new tab.
+Above shows how EnvGPT interacts with the user's query by using the tools it has to generate its response. This was taken using the CLI (Terminal) when testing EnvGPT before deploying it to Steamship. Click on the image to view an enlarged version in a new tab.
 
 
 ## Changelog & Future Updates
